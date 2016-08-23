@@ -1,0 +1,3 @@
+<resources>
+    <string name="message_error__not_found_articles">記事が存在しません</string>
+</resources>
