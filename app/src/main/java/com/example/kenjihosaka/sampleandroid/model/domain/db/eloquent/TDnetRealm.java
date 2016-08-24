@@ -156,7 +156,12 @@ public class TDnetRealm implements TDnetDB {
     public boolean deleteOldArticles() {
         final Realm realm = Realm.getDefaultInstance();
         try {
-            realm.where(Article.class).lessThan("pubdate", DateUtil.getDayBeforeTarget(7)).findAll().deleteAllFromRealm();
+            realm.executeTransaction(new Realm.Transaction() {
+                @Override
+                public void execute(Realm realm) {
+                    realm.where(Article.class).lessThan("published", DateUtil.getDayBeforeTarget(7)).findAll().deleteAllFromRealm();
+                }
+            });
         } catch (Exception e) {
             Log.e("TDnetRealm", "Realm delete fault");
             e.printStackTrace();
