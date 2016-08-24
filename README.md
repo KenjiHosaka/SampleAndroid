@@ -1,18 +1,7 @@
-# SampleAndroid
-Androidサンプルアプリ
+# Lesson
+RealmObjectクラスを拡張して記事をお気に入りできるようにしてみましょう
 
-# Sample for 
-- Realm (Cache)
-- RxAndroid (PubSub)
-- Dagger2 (DI)
-- Retrofit (REST API)
-- DDD
-
-# Lesson branch List
-- [lesson/add_testcode](https://github.com/KenjiHosaka/SampleAndroid/tree/lesson/add_testcode)
-- [lesson/retrolambda](https://github.com/KenjiHosaka/SampleAndroid/tree/lesson/retrolambda)
-- [lesson/databinding](https://github.com/KenjiHosaka/SampleAndroid/tree/lesson/databinding)
-- [lesson/like_article](https://github.com/KenjiHosaka/SampleAndroid/tree/lesson/like_article)
-
-# Use API
-https://webapi.yanoshin.jp/tdnet/
+# Detail
+- Realm migrationファイルの作成
+- Pagerに `お気に入りの記事` タブを追加し一覧で表示できる
+- 記事一覧画面でお気に入り登録/解除ができる
